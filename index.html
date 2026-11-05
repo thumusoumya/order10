@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Diwali, Cutie 🪔</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   UNSAID — Cutie's Diwali Glow · strength + fun (no photos)
+   ========================================================= */
+:root{--g1:#f6d68a;--g2:#d4a443;--blush:#ffb6c8;--rose:#ff6f9c;--cream:#fff3e6}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;background:#000;display:flex;justify-content:center;overflow:hidden;font-family:Montserrat,sans-serif;color:var(--cream)}
+.app{position:relative;width:100%;max-width:440px;height:100vh;height:100dvh;min-height:560px;overflow:hidden;overflow:clip;
+  background:radial-gradient(90% 60% at 50% 38%,#4a0f33 0%,#260820 55%,#0d030a 100%)}
+[hidden]{display:none!important}
+#fx{position:absolute;inset:0;width:100%;height:100%;z-index:40;pointer-events:none}
+.sc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:36px 20px;
+  opacity:0;visibility:hidden;transition:opacity 1s ease,visibility 0s 1s;z-index:5}
+.sc.on{opacity:1;visibility:visible;transition:opacity 1s ease}
+.sc > *{flex-shrink:0}
+.gold{background:linear-gradient(100deg,#b8862b 0%,#fff1c4 45%,#e2b552 55%,#a8781f 100%);background-size:250% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 3.5s ease-in-out infinite}
+@keyframes shine{from{background-position:100% 0}to{background-position:-50% 0}}
+.kick{font:700 11px Cinzel,serif;letter-spacing:.34em;text-transform:uppercase;color:var(--blush)}
+.script{font-family:'Great Vibes',cursive}
+.ttl{font-size:46px;line-height:1.1;margin-top:6px}
+.soft{font:italic 500 21px/1.42 'Cormorant Garamond',serif;color:var(--cream);max-width:320px}
+.hint{font:600 10.5px Montserrat;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,243,230,.78);animation:blink 1.8s infinite}
+@keyframes blink{50%{opacity:.35}}
+.hint.off{animation:none;opacity:0;transition:opacity .5s}
+.count{margin-top:8px;font:700 11px Montserrat;letter-spacing:.25em;color:rgba(255,243,230,.65)}
+.help{margin-top:10px;background:none;border:0;color:rgba(255,243,230,.6);font:500 12px Montserrat;text-decoration:underline;cursor:pointer}
+.fade{pointer-events:none;opacity:0;transform:translateY(10px);transition:opacity 1s,transform 1s}
+.fade.on{opacity:1;transform:none}
+.stars{position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(1.5px 1.5px at 12% 18%,#fff,transparent),radial-gradient(1px 1px at 30% 8%,#fff,transparent),radial-gradient(1.5px 1.5px at 62% 14%,#fff,transparent),
+  radial-gradient(1px 1px at 82% 26%,#fff,transparent),radial-gradient(1px 1px at 8% 44%,#fff,transparent),radial-gradient(1.5px 1.5px at 90% 50%,#fff,transparent),
+  radial-gradient(1px 1px at 46% 6%,#fff,transparent),radial-gradient(1px 1px at 72% 36%,#fff,transparent);opacity:.5}
+/* hanging marigold + toran on top */
+.toran{position:absolute;top:0;left:0;right:0;height:60px;pointer-events:none;z-index:3}
+.toran svg{width:100%;height:100%}
+
+/* ---------- DIYA ---------- */
+.diya{position:relative;width:120px;height:60px}
+.diya svg{position:absolute;left:0;bottom:0;width:100%;height:100%;overflow:visible}
+.diya .wick{position:absolute;left:50%;bottom:50px;width:3px;height:9px;margin-left:-1.5px;border-radius:2px;background:#2a1408}
+.diya .flame{position:absolute;left:50%;bottom:54px;width:24px;height:44px;margin-left:-12px;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;
+  background:radial-gradient(ellipse at 50% 78%,#fff 0 14%,#fff0a0 30%,#ffb02e 58%,rgba(255,90,0,.9) 68%,rgba(255,60,0,0) 74%);
+  transform-origin:50% 100%;transform:scale(0);opacity:0;transition:transform .6s cubic-bezier(.2,1.6,.4,1),opacity .4s}
+.diya.lit .flame{transform:scale(1);opacity:1;animation:flick 1.3s ease-in-out infinite alternate .6s}
+@keyframes flick{0%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.06,.94) rotate(2deg)}100%{transform:scale(.95,1.07) rotate(-1deg)}}
+.diya:before{content:"";position:absolute;left:50%;bottom:20px;width:200px;height:200px;margin-left:-100px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,170,50,.5),rgba(255,120,30,.15) 40%,transparent 68%);opacity:0;transition:opacity 1.2s;pointer-events:none}
+.diya.lit:before{opacity:1;animation:breathe 2.6s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.08)}}
+
+/* ---------- 0. LOTUS ---------- */
+#s-start{cursor:pointer}
+.lotus{position:relative;width:260px;height:200px;margin:26px 0 10px}
+.lotus svg{width:100%;height:100%;overflow:visible}
+.pet{transform-origin:130px 160px;transition:transform 1.4s cubic-bezier(.2,1.2,.4,1)}
+.lotus .glowc{opacity:0;transition:opacity 1.2s}
+#s-start.go .lotus .glowc{opacity:1}
+.st-for{font:italic 600 16px 'Cormorant Garamond',serif;color:rgba(255,243,230,.85);margin-top:6px}
+.st-name{font-size:84px;line-height:1;filter:drop-shadow(0 0 18px rgba(246,214,138,.4))}
+.st-after{margin-top:10px}
+
+/* ---------- 1. BANGLES ---------- */
+#s-bangles{justify-content:flex-start;padding-top:66px}
+.stand{position:relative;width:200px;height:230px;margin-top:16px}
+.stand .pole{position:absolute;left:50%;bottom:16px;width:46px;height:190px;margin-left:-23px;border-radius:23px 23px 6px 6px;background:linear-gradient(90deg,#5a0f2e,#9b2350 50%,#5a0f2e);box-shadow:0 10px 24px rgba(0,0,0,.5)}
+.stand .base{position:absolute;left:50%;bottom:0;width:140px;height:24px;margin-left:-70px;border-radius:50%;background:radial-gradient(ellipse,#d4a443,#7a5216);box-shadow:0 8px 18px rgba(0,0,0,.5)}
+.sb{position:absolute;left:50%;width:118px;height:34px;margin-left:-59px;border-radius:50%;border:9px solid;opacity:0;transform:translateY(-120px) scale(1.1);transition:transform .7s cubic-bezier(.3,1.5,.5,1),opacity .4s;
+  box-shadow:0 0 14px rgba(255,210,120,.45),inset 0 0 6px rgba(0,0,0,.35)}
+.sb.on{opacity:1;transform:none}
+.tray{display:flex;gap:10px;margin-top:14px}
+.tb{width:54px;height:54px;border-radius:50%;border:8px solid;cursor:pointer;box-shadow:0 6px 14px rgba(0,0,0,.4),inset 0 0 6px rgba(0,0,0,.35);animation:jig 2.4s ease-in-out infinite;transition:transform .3s,opacity .3s}
+.tb:nth-child(even){animation-delay:-1.2s}
+@keyframes jig{50%{transform:translateY(-5px) rotate(6deg)}}
+.tb.used{opacity:0;transform:scale(.3);pointer-events:none}
+.bg-word{min-height:118px;margin-top:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .4s}
+.bg-word .w{font-size:52px;line-height:1}
+.bg-word .soft{margin-top:4px;font-size:19px}
+
+/* ---------- 2. DIYAS ---------- */
+#s-diyas{justify-content:flex-start;padding-top:66px}
+.warm{position:absolute;inset:0;pointer-events:none;background:radial-gradient(80% 55% at 50% 70%,rgba(255,150,40,.35),rgba(255,90,20,.12) 50%,transparent 75%);opacity:0;transition:opacity 1.2s}
+.dy-msg{min-height:140px;display:flex;align-items:center;justify-content:center;margin-top:10px;transition:opacity .5s}
+.dy-msg .soft{font-size:24px}
+.arc{position:relative;width:340px;height:200px;margin-top:6px}
+.slot{position:absolute;width:76px;height:110px;margin-left:-38px;cursor:pointer;display:flex;align-items:flex-end;justify-content:center}
+.slot .diya{transform:scale(.6);transform-origin:50% 100%}
+.slot:not(.done):after{content:"";position:absolute;left:50%;bottom:-6px;width:40px;height:40px;margin-left:-20px;border-radius:50%;border:1.5px dashed rgba(246,214,138,.5);animation:ring 1.8s ease-in-out infinite}
+@keyframes ring{50%{transform:scale(1.25);opacity:.3}}
+
+/* ---------- 3. SPARKLER ---------- */
+#s-spark{touch-action:none;cursor:crosshair}
+.sp-top{position:absolute;top:66px;left:20px;right:20px;transition:opacity .6s}
+.sp-name{font-size:96px;line-height:1;opacity:0;transform:scale(.6);transition:all 1.1s cubic-bezier(.2,1.5,.4,1);filter:drop-shadow(0 0 22px rgba(246,214,138,.6))}
+.sp-name.on{opacity:1;transform:none}
+.sp-sub{margin:14px auto 0}
+.sp-meter{position:absolute;bottom:40px;left:50%;width:180px;height:4px;margin-left:-90px;border-radius:2px;background:rgba(255,255,255,.12);overflow:hidden;transition:opacity .6s}
+.sp-meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff6f9c,#fff1c4)}
+
+/* ---------- 4. FIREWORKS ---------- */
+#s-sky{cursor:pointer}
+.sk-top{position:absolute;top:66px;left:20px;right:20px;transition:opacity .6s}
+.sk-hb{opacity:0;transform:scale(.5);transition:all 1.2s cubic-bezier(.2,1.5,.4,1)}
+.sk-hb.on{opacity:1;transform:none}
+.sk-hb .a{font-size:70px;line-height:1.05;filter:drop-shadow(0 0 22px rgba(246,214,138,.45))}
+.sk-hb .b{font-size:54px;line-height:1.1;color:var(--blush);margin-top:2px}
+.sk-hb .soft{margin:12px auto 0}
+.sk-row{display:flex;justify-content:center;margin-top:22px}
+.sk-row .diya{transform:scale(.42);transform-origin:50% 100%;margin:0 -30px}
+
+/* ---------- 5. NOTE ---------- */
+#s-final{justify-content:flex-start;padding:70px 18px 30px;overflow-y:auto;overflow-x:hidden}
+.letter{width:100%;max-width:350px;background:linear-gradient(#fffaf2,#fbe9e4);color:#3a1428;border-radius:14px;padding:30px 24px 24px;box-shadow:0 24px 50px rgba(0,0,0,.55);
+  transform:translateY(80px) scale(.9);opacity:0;transition:all 1s cubic-bezier(.2,1.2,.4,1);position:relative;text-align:left}
+.sc.on .letter{transform:none;opacity:1}
+.letter:before{content:"";position:absolute;left:12px;right:12px;top:12px;bottom:12px;border:1px solid rgba(212,164,67,.55);border-radius:8px;pointer-events:none}
+.lt-k{font:700 10px Cinzel,serif;letter-spacing:.4em;color:#b38a2e;text-align:center}
+.lt-n{font-size:52px;line-height:1.1;color:#a3174f;margin:4px 0 12px;text-align:center}
+.note p{font:500 19px/1.45 'Cormorant Garamond',serif;margin-bottom:10px;opacity:0;transform:translateY(6px);transition:all .8s}
+.note p:first-child{font-style:italic;font-weight:600}
+.note p.s{opacity:1;transform:none}
+.sign{font-size:30px;color:#a3174f;margin-top:6px;opacity:0;transition:opacity 1s;text-align:right}
+.sign.s{opacity:1}
+.again{margin:24px 0 10px;background:none;border:1px solid var(--g2);color:var(--g1);font:600 11px Montserrat;letter-spacing:.3em;text-transform:uppercase;padding:12px 22px;border-radius:30px;cursor:pointer}
+
+/* ---------- smaller phones ---------- */
+@media (max-height:740px){
+  .ttl{font-size:38px}
+  .lotus{transform:scale(.85);margin:6px 0 -10px}.st-name{font-size:68px}
+  #s-bangles,#s-diyas{padding-top:56px}.stand{transform:scale(.8);margin:-14px 0 -30px}.bg-word{min-height:96px}.bg-word .w{font-size:42px}
+  .dy-msg{min-height:110px}.dy-msg .soft{font-size:21px}
+  .sp-name{font-size:76px}.sk-hb .a{font-size:58px}.sk-hb .b{font-size:44px}
+}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="stars"></div>
+  <div class="toran" id="toran"></div>
+  <canvas id="fx"></canvas>
+
+  <!-- 0. LOTUS OPENS -->
+  <section class="sc on" id="s-start">
+    <div class="kick" id="stKick"></div>
+    <div class="lotus">
+      <svg viewBox="0 0 260 200" id="lotusSvg">
+        <defs>
+          <linearGradient id="petG" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#ffd3e0"/><stop offset=".6" stop-color="#ff7fa8"/><stop offset="1" stop-color="#c2185b"/></linearGradient>
+          <radialGradient id="cG"><stop offset="0" stop-color="#fff6c8"/><stop offset=".5" stop-color="rgba(255,190,90,.55)"/><stop offset="1" stop-color="rgba(255,190,90,0)"/></radialGradient>
+        </defs>
+        <circle class="glowc" cx="130" cy="120" r="110" fill="url(#cG)"/>
+        <g id="petals"></g>
+      </svg>
+    </div>
+    <div class="st-for" id="stFor"></div>
+    <div class="st-name script gold" id="stName"></div>
+    <div class="soft st-after fade" id="stAfter"></div>
+    <div class="hint" id="stHint" style="margin-top:20px"></div>
+  </section>
+
+  <!-- 1. BANGLES OF STRENGTH -->
+  <section class="sc" id="s-bangles">
+    <div class="kick" id="bgKick"></div>
+    <div class="ttl script gold" id="bgTitle"></div>
+    <div class="stand" id="stand"><div class="pole"></div><div class="base"></div></div>
+    <div class="bg-word" id="bgWord"><div class="w script gold" id="bgW"></div><div class="soft" id="bgL"></div></div>
+    <div class="tray" id="tray"></div>
+    <button class="help" id="bgHelp" hidden>Wear them for me ✨</button>
+  </section>
+
+  <!-- 2. LIGHT THE DIYAS -->
+  <section class="sc" id="s-diyas">
+    <div class="warm" id="warm"></div>
+    <div class="kick" id="dyKick"></div>
+    <div class="ttl script gold" id="dyTitle"></div>
+    <div class="dy-msg" id="dyMsg"><div class="soft" id="dyTxt"></div></div>
+    <div class="arc" id="arc"></div>
+    <div class="count" id="dyCount"></div>
+    <button class="help" id="dyHelp" hidden>Light them for me ✨</button>
+  </section>
+
+  <!-- 3. SPARKLER -->
+  <section class="sc" id="s-spark">
+    <div class="sp-top" id="spTop"><div class="kick" id="spKick"></div><div class="ttl script gold" id="spTitle"></div><div class="hint" id="spHint" style="margin-top:10px"></div></div>
+    <div class="sp-name script gold" id="spName"></div>
+    <div class="soft sp-sub fade" id="spSub"></div>
+    <div class="sp-meter" id="spMeter"><i id="spBar"></i></div>
+  </section>
+
+  <!-- 4. FIREWORKS -->
+  <section class="sc" id="s-sky">
+    <div class="sk-top" id="skTop"><div class="kick" id="skKick"></div><div class="ttl script gold" id="skTitle"></div><div class="hint" id="skHint" style="margin-top:10px"></div></div>
+    <div class="sk-hb" id="skHb">
+      <div class="a script gold" id="skA"></div>
+      <div class="b script" id="skB"></div>
+      <div class="soft" id="skC"></div>
+      <div class="sk-row" id="skRow"></div>
+    </div>
+  </section>
+
+  <!-- 5. NOTE -->
+  <section class="sc" id="s-final">
+    <div class="letter">
+      <div class="lt-k" id="ltKick"></div>
+      <div class="lt-n script" id="ltTitle"></div>
+      <div class="note" id="note"></div>
+      <div class="sign script" id="sign"></div>
+    </div>
+    <button class="again" id="again" hidden>↺ Watch again</button>
+  </section>
+</div>
+
+<script>
+/* =========================================================
+   ✏️ EDIT EVERYTHING HERE
+   ========================================================= */
+const DIWALI = {
+  name: "Cutie",
+  song: "order10.mpeg",                          // your song file ("" = no song)
+
+  startKick: "A Diwali surprise",
+  startFor: "made with love, just for",
+  startAfter: "This Diwali, let's light you up from the inside. ✨",
+  startHint: "Tap the lotus",
+
+  bangleKick: "Every girl needs her bangles",
+  bangleTitle: "Wear your strength",
+  bangleStart: ["Tap a bangle", "Each one is something you already are."],
+  bangles: [                                      // [word, line, colour]
+    ["Strong", "You've carried so much — and you're still standing.", "#d4a443"],
+    ["Brave", "Facing hard days takes more courage than anyone sees.", "#e0234e"],
+    ["Beautiful", "Inside and out — even on the days you don't feel it.", "#ff6f9c"],
+    ["Unstoppable", "Life can slow you down. It can't stop you.", "#1f9e74"],
+    ["Enough", "Just as you are. Always have been.", "#8b5cf6"]
+  ],
+
+  diyaKick: "Every flame is a reminder",
+  diyaTitle: "Light the diyas",
+  diyaStart: "Tap a diya to light it",
+  reminders: [
+    "You are so much stronger than you feel today.",
+    "This tough phase is not your forever.",
+    "You've handled every hard day so far — every single one.",
+    "It's okay to rest. You're still winning.",
+    "Brighter days are already on their way to you."
+  ],
+  diyaEnd: "Look how bright it is now. That light was always you. 🪔",
+
+  sparkKick: "Your turn to sparkle",
+  sparkTitle: "Play with the phuljhadi",
+  sparkHint: "Drag your finger across the screen",
+  sparkSub: "You shine brighter than every diya tonight. ✨",
+
+  skyKick: "And now…",
+  skyTitle: "Light up the sky",
+  skyHint: "Tap anywhere for crackers",
+  hbA: "Happy Diwali",
+  hbC: "May this Diwali bring back your smile, your peace and your sparkle.",
+
+  noteKick: "A NOTE FOR YOU",
+  noteTitle: "Dear Cutie",
+  note: [
+    "Hey Cutie,",
+    "I know things have been tough lately. But this Diwali, I want you to remember who you are.",
+    "You're strong, you're brave, and you're so much more than this hard phase.",
+    "Just like Diwali comes on the darkest night and still everything shines — your brightest days are coming too.",
+    "And whenever you need someone, call me, text me, anytime. I'm always here for you.",
+    "Keep smiling, keep shining. Happy Diwali! 🪔✨"
+  ],
+  sign: "— Always cheering for you"
+};
+/* ========================================================= */
+
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const app = $("#app");
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const at = el => { const a = app.getBoundingClientRect(), r = el.getBoundingClientRect(); return [r.left - a.left + r.width / 2, r.top - a.top + r.height / 2]; };
+const helpAfter = (id, ms, isDone) => setTimeout(() => { if (!isDone()) { const b = $(id); b.hidden = false; b.removeAttribute("hidden"); } }, ms);
+const txt = (id, t) => $(id).textContent = t;
+const D = DIWALI;
+
+/* ---------- diya markup ---------- */
+const DIYA = `<div class="wick"></div><div class="flame"></div><svg viewBox="0 0 120 60">
+  <defs><linearGradient id="clay" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e98a3f"/><stop offset="1" stop-color="#8a3510"/></linearGradient></defs>
+  <path d="M2 16 Q60 28 118 16 Q112 52 60 57 Q8 52 2 16Z" fill="url(#clay)"/>
+  <path d="M2 16 Q60 28 118 16 Q60 4 2 16Z" fill="#5a1f08"/>
+  <path d="M16 31 Q60 43 104 31" stroke="#f6d68a" stroke-width="2.2" fill="none" stroke-dasharray="1 6" stroke-linecap="round"/>
+  <path d="M30 42 Q60 50 90 42" stroke="#ffe6a0" stroke-width="1.4" fill="none" opacity=".7"/>
+  <circle cx="60" cy="47" r="3" fill="#f6d68a"/></svg>`;
+const mkDiya = () => `<div class="diya">${DIYA}</div>`;
+
+/* ---------- build ---------- */
+txt("#stKick", D.startKick); txt("#stFor", D.startFor); txt("#stName", D.name); txt("#stAfter", D.startAfter); txt("#stHint", D.startHint);
+txt("#bgKick", D.bangleKick); txt("#bgTitle", D.bangleTitle); txt("#bgW", D.bangleStart[0]); txt("#bgL", D.bangleStart[1]);
+txt("#dyKick", D.diyaKick); txt("#dyTitle", D.diyaTitle); txt("#dyTxt", D.diyaStart);
+txt("#spKick", D.sparkKick); txt("#spTitle", D.sparkTitle); txt("#spHint", D.sparkHint); txt("#spName", D.name); txt("#spSub", D.sparkSub);
+txt("#skKick", D.skyKick); txt("#skTitle", D.skyTitle); txt("#skHint", D.skyHint); txt("#skA", D.hbA); txt("#skB", D.name); txt("#skC", D.hbC);
+txt("#ltKick", D.noteKick); txt("#ltTitle", D.noteTitle); txt("#sign", D.sign);
+$("#note").innerHTML = D.note.map(p => `<p>${p}</p>`).join("");
+/* toran: string with marigolds and mango leaves */
+{ let s = `<svg viewBox="0 0 400 60" preserveAspectRatio="none"><path d="M0 6 Q200 30 400 6" stroke="#d4a443" stroke-width="2" fill="none"/>`;
+  for (let i = 0; i <= 16; i++) { const x = i * 25, y = 6 + Math.sin(i / 16 * Math.PI) * 12;
+    s += i % 2 ? `<path d="M${x} ${y} q-6 14 0 26 q6 -12 0 -26z" fill="#2e7d32"/>` : `<circle cx="${x}" cy="${y + 6}" r="7" fill="${i % 4 ? "#ff9800" : "#ffc107"}"/><circle cx="${x}" cy="${y + 6}" r="3" fill="#e65100"/>`; }
+  $("#toran").innerHTML = s + "</svg>"; }
+/* lotus petals */
+{ let s = ""; const outer = [-70, -45, -22, 0, 22, 45, 70], inner = [-35, -12, 12, 35];
+  outer.forEach(a => s += `<path class="pet" data-a="${a}" d="M130 160 C 104 120, 108 70, 130 40 C 152 70, 156 120, 130 160 Z" fill="url(#petG)" stroke="#ffe0ea" stroke-width="1.2" style="transform:rotate(${a * .25}deg) scale(.55)"/>`);
+  inner.forEach(a => s += `<path class="pet" data-a="${a}" d="M130 160 C 112 128, 114 90, 130 66 C 146 90, 148 128, 130 160 Z" fill="#ffc2d6" stroke="#fff" stroke-width="1" style="transform:rotate(${a * .25}deg) scale(.6)"/>`);
+  s += `<ellipse cx="130" cy="160" rx="34" ry="9" fill="#2e7d32"/><ellipse cx="130" cy="156" rx="16" ry="6" fill="#ffd54f"/>`;
+  $("#petals").innerHTML = s; }
+/* bangles */
+$("#tray").innerHTML = D.bangles.map((b, i) => `<div class="tb" data-i="${i}" style="border-color:${b[2]};background:radial-gradient(circle,transparent 55%,rgba(255,255,255,.15) 56%,transparent 70%)"></div>`).join("");
+$("#stand").insertAdjacentHTML("beforeend", D.bangles.map((b, i) => `<div class="sb" style="bottom:${30 + i * 30}px;border-color:${b[2]};outline:2px solid rgba(246,214,138,.6);outline-offset:-5px"></div>`).join(""));
+/* diyas */
+const AP = [[40, 40], [105, 70], [170, 82], [235, 70], [300, 40]];
+$("#arc").innerHTML = D.reminders.map((_, i) => `<div class="slot" style="left:${AP[i % 5][0]}px;top:${AP[i % 5][1]}px">${mkDiya()}</div>`).join("");
+$("#skRow").innerHTML = Array.from({ length: 5 }, mkDiya).join("");
+
+/* ---------- particles ---------- */
+const cv = $("#fx"), cx = cv.getContext("2d"); let P = [];
+function fit() { const r = app.getBoundingClientRect(), k = devicePixelRatio || 1; cv.width = r.width * k; cv.height = r.height * k; cx.setTransform(k, 0, 0, k, 0, 0); }
+fit(); addEventListener("resize", fit);
+const GOLD = ["#fff1c4", "#f6d68a", "#ffb02e", "#ffffff", "#ffb6c8"];
+const FW = ["#ff6f9c", "#ffb02e", "#2ec4b6", "#9b7bff", "#f6d68a", "#ff7a3d"];
+function burst(x, y, n = 80, cols = GOLD, sp = 6) {
+  for (let i = 0; i < n; i++) { const a = Math.random() * 6.28, v = 1 + Math.random() * sp;
+    P.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v, g: .05, s: 1.2 + Math.random() * 2.2, c: cols[i % cols.length], l: 1, d: .012 }); }
+}
+function firework(x, y) {
+  const c = FW[Math.floor(Math.random() * FW.length)], c2 = FW[Math.floor(Math.random() * FW.length)];
+  for (let i = 0; i < 90; i++) { const a = i / 90 * 6.28, v = 2.5 + Math.random() * 3;
+    P.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v, g: .04, s: 1.9, c: Math.random() < .25 ? "#fff" : (i % 2 ? c : c2), l: 1, d: .011, drag: .975 }); }
+}
+function spark(x, y) {
+  for (let i = 0; i < 7; i++) { const a = Math.random() * 6.28, v = .5 + Math.random() * 2.6;
+    P.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v, g: .03, s: .8 + Math.random() * 1.4, c: GOLD[i % 5], l: 1, d: .018 + Math.random() * .02, line: 1 }); }
+  P.push({ x, y, vx: 0, vy: 0, g: 0, s: 2.6, c: "#fff1c4", l: 1, d: .006 });
+}
+let emberT;
+function embers() { if (emberT) return; emberT = setInterval(() => { const W = app.clientWidth, H = app.clientHeight;
+  P.push({ x: Math.random() * W, y: H + 4, vx: (Math.random() - .5) * .4, vy: -(.5 + Math.random() * 1), g: 0, s: .8 + Math.random() * 1.6, c: Math.random() < .5 ? "#ffb02e" : "#ffb6c8", l: .9, d: .0035 }); }, 180); }
+(function loop() {
+  const W = app.clientWidth, H = app.clientHeight; cx.clearRect(0, 0, W, H);
+  P = P.filter(p => p.l > 0 && p.y < H + 40);
+  for (const p of P) {
+    if (p.drag) { p.vx *= p.drag; p.vy *= p.drag; }
+    const ox = p.x, oy = p.y;
+    p.vy += p.g; p.x += p.vx; p.y += p.vy; p.l -= p.d;
+    cx.globalAlpha = Math.max(0, Math.min(1, p.l));
+    if (p.line) { cx.strokeStyle = p.c; cx.lineWidth = p.s; cx.beginPath(); cx.moveTo(ox, oy); cx.lineTo(p.x + p.vx * 2, p.y + p.vy * 2); cx.stroke(); }
+    else { cx.fillStyle = p.c; cx.beginPath(); cx.arc(p.x, p.y, p.s, 0, 7); cx.fill(); }
+  }
+  cx.globalAlpha = 1; requestAnimationFrame(loop);
+})();
+
+/* ---------- song ---------- */
+let song;
+function startSong() {
+  if (!D.song || song) return;
+  song = new Audio(D.song); song.loop = true; song.volume = 0; song.play().catch(() => {});
+  let v = 0; const f = setInterval(() => { v = Math.min(.85, v + .05); song.volume = v; if (v >= .85) clearInterval(f); }, 120);
+}
+
+/* ---------- scenes ---------- */
+function show(id) { $$(".sc.on").forEach(s => s.classList.remove("on")); const el = $("#" + id); void el.offsetWidth; el.classList.add("on"); return el; }
+
+function bangles() {
+  return new Promise(res => {
+    const tb = $$(".tb"), sb = $$(".sb"), N = tb.length; let n = 0, busy = false, done = false;
+    const say = async (w, l) => { $("#bgWord").style.opacity = 0; await wait(350); txt("#bgW", w); txt("#bgL", l); $("#bgWord").style.opacity = 1; };
+    const wear = async t => {
+      if (busy || t.classList.contains("used")) return; busy = true;
+      const b = D.bangles[+t.dataset.i]; const [x, y] = at(t); burst(x, y, 30, [b[2], "#fff1c4", "#fff"], 4);
+      t.classList.add("used"); sb[n].classList.add("on");
+      setTimeout(() => { const [sx, sy] = at(sb[n - 1] || sb[0]); burst(sx, sy, 40, [b[2], "#f6d68a", "#fff"], 4); }, 650);
+      say(b[0], b[1]); n++;
+      await wait(1000); busy = false;
+      if (n === N && !done) {
+        done = true; $("#bgHelp").hidden = true;
+        await wait(2600); say("Now you're ready ✨", "Strong, brave, beautiful, unstoppable — and enough.");
+        const [x2, y2] = at($("#stand")); burst(x2, y2, 140, GOLD, 7);
+        await wait(4200); res();
+      }
+    };
+    tb.forEach(t => t.onclick = () => wear(t));
+    $("#bgHelp").onclick = async () => { $("#bgHelp").hidden = true; for (const t of tb) { while (busy) await wait(100); await wear(t); await wait(2200); } };
+    helpAfter("#bgHelp", 20000, () => done);
+  });
+}
+
+function diyas() {
+  return new Promise(res => {
+    const sl = $$(".slot"), N = sl.length; let n = 0, done = false;
+    const count = () => txt("#dyCount", `${n} / ${N} LIT`); count();
+    const say = async t => { $("#dyMsg").style.opacity = 0; await wait(450); txt("#dyTxt", t); $("#dyMsg").style.opacity = 1; };
+    const light = s => {
+      if (s.classList.contains("done")) return;
+      s.classList.add("done"); s.querySelector(".diya").classList.add("lit");
+      const [x, y] = at(s); burst(x, y, 40, GOLD, 3.5);
+      say(D.reminders[n]); n++; count(); $("#warm").style.opacity = n / N;
+      if (n === N && !done) {
+        done = true; $("#dyHelp").hidden = true;
+        setTimeout(() => say(D.diyaEnd), 3400);
+        setTimeout(res, 7400);
+      }
+    };
+    sl.forEach(s => s.onclick = () => light(s));
+    $("#dyHelp").onclick = async () => { $("#dyHelp").hidden = true; for (const s of sl) { if (!s.classList.contains("done")) { light(s); await wait(2600); } } };
+    helpAfter("#dyHelp", 20000, () => done);
+  });
+}
+
+function sparkler() {
+  return new Promise(res => {
+    const sc = $("#s-spark"), NEED = 1500; let dist = 0, last = null, done = false;
+    const finish = async () => {
+      if (done) return; done = true;
+      $("#spTop").style.opacity = 0; $("#spMeter").style.opacity = 0;
+      $("#spName").classList.add("on"); const [x, y] = at($("#spName")); burst(x, y, 150, GOLD, 7);
+      await wait(1200); $("#spSub").classList.add("on");
+      await wait(4800); res();
+    };
+    const move = (x, y) => {
+      if (done) return;
+      const a = app.getBoundingClientRect(); x -= a.left; y -= a.top;
+      spark(x, y);
+      if (last) dist += Math.hypot(x - last[0], y - last[1]);
+      last = [x, y]; $("#spBar").style.width = Math.min(100, dist / NEED * 100) + "%";
+      if (dist >= NEED) finish();
+    };
+    sc.addEventListener("pointermove", e => { if (e.pointerType === "mouse" && !e.buttons) { last = null; return; } move(e.clientX, e.clientY); });
+    sc.addEventListener("pointerdown", e => { last = null; move(e.clientX, e.clientY); });
+    sc.addEventListener("pointerup", () => last = null);
+    setTimeout(async () => {   /* if she doesn't play, the sparkler draws by itself */
+      if (done || dist > 200) { if (!done) setTimeout(() => { if (!done) finish(); }, 8000); return; }
+      const W = app.clientWidth, H = app.clientHeight, a = app.getBoundingClientRect();
+      for (let t = 0; t < 120 && !done; t++) { const k = t / 120 * 6.283 * 2; move(a.left + W / 2 + Math.sin(k) * W * .32, a.top + H * .5 + Math.sin(k * 2) * H * .12); await wait(25); }
+      finish();
+    }, 9000);
+  });
+}
+
+function sky() {
+  return new Promise(res => {
+    const sc = $("#s-sky"); let n = 0, done = false;
+    const finale = async () => {
+      if (done) return; done = true;
+      $("#skTop").style.opacity = 0;
+      const W = app.clientWidth, H = app.clientHeight;
+      for (let k = 0; k < 10; k++) setTimeout(() => firework(W * (.12 + Math.random() * .76), H * (.1 + Math.random() * .3)), k * 320);
+      await wait(700); $("#skHb").classList.add("on");
+      setTimeout(() => $$("#skRow .diya").forEach((d, i) => setTimeout(() => d.classList.add("lit"), i * 250)), 900);
+      await wait(6400); res();
+    };
+    sc.onclick = e => {
+      if (done) return;
+      const a = app.getBoundingClientRect(); firework(e.clientX - a.left, e.clientY - a.top);
+      n++; if (n >= 4) setTimeout(finale, 700);
+    };
+    setTimeout(() => { if (!done) finale(); }, 14000);
+  });
+}
+
+let started = false;
+$("#s-start").addEventListener("click", async () => {
+  if (started) return; started = true;
+  startSong();
+  $("#s-start").classList.add("go"); $("#stHint").classList.add("off");
+  $$(".pet").forEach(p => p.style.transform = `rotate(${p.dataset.a}deg) scale(1)`);
+  setTimeout(() => { const [x, y] = at($(".lotus")); burst(x, y, 140, GOLD, 6); }, 700);
+  embers();
+  await wait(1400); $("#stAfter").classList.add("on");
+  await wait(3600);
+  show("s-bangles"); await wait(900);
+  await bangles();
+  show("s-diyas"); await wait(900);
+  await diyas();
+  show("s-spark"); await wait(900);
+  await sparkler();
+  show("s-sky"); await wait(900);
+  await sky();
+  show("s-final"); await wait(1300);
+  const fs = $("#s-final"), down = () => fs.scrollTo({ top: fs.scrollHeight, behavior: "smooth" });
+  for (const p of $$("#note p")) { p.classList.add("s"); down(); await wait(1500); }
+  $("#sign").classList.add("s"); await wait(800);
+  const a = $("#again"); a.hidden = false; a.removeAttribute("hidden"); down();
+});
+$("#again").onclick = () => location.reload();
+</script>
+</body>
+</html>
